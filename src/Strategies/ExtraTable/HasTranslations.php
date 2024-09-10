@@ -87,7 +87,7 @@ trait HasTranslations
      */
     protected function getEntityTranslationTable(): string
     {
-        return $this->joiningTableSegment().'_translations';
+        return $this->joiningTableSegment().'_lang';
     }
 
     /**
