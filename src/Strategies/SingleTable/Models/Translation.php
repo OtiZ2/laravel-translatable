@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Nevadskiy\Translatable\Strategies\SingleTable\HasTranslations;
+use Abbasudo\Purity\Traits\Filterable;
+use Abbasudo\Purity\Traits\Sortable;
 
 use function is_array;
 
@@ -23,6 +25,8 @@ use function is_array;
  */
 class Translation extends Model
 {
+    use Filterable, Sortable;
+
     /**
      * The attributes that are mass assignable.
      *

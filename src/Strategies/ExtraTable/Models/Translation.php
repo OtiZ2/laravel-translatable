@@ -6,6 +6,8 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use RuntimeException;
+use Abbasudo\Purity\Traits\Filterable;
+use Abbasudo\Purity\Traits\Sortable;
 
 use function is_array;
 
@@ -17,6 +19,9 @@ use function is_array;
  */
 class Translation extends Model
 {
+
+    use Filterable, Sortable;
+
     /**
      * The attributes that aren't mass assignable.
      *
